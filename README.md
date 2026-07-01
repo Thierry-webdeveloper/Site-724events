@@ -57,7 +57,7 @@ Le site est accessible sur [http://localhost:3000](http://localhost:3000).
 
 ## 🔗 Liens
 
-- **Repo GitHub** : https://github.com/Thierry-webdeveloper/724events.git
+- **Repo GitHub** : https://github.com/Thierry-webdeveloper/Site-724events.git
 
 ---
 
