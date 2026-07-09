@@ -29,7 +29,7 @@ const EventList = () => {
     setType(evtType);
   };
 
-  // Calcule du nombre de page pour la barre de pagination
+  // Calcul du nombre de page pour la barre de pagination
   // const pageNumber = Math.floor((eventsByType?.length || 0) / PER_PAGE) + 1;
   const pageNumber = Math.ceil((eventsByType?.length || 0) / PER_PAGE);
 
