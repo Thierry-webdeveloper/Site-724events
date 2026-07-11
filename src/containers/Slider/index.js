@@ -13,6 +13,8 @@ const Slider = () => {
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 1,
   );
   const nextCard = () => {
+    // Garde fou du premier rendu, * data * vaut null → * byDateAsc * vaut undefined
+    if (!byDateAsc) return;
     setTimeout(
       // Correction de la borne supérieure pour *index*
       // () => setIndex(index < byDateDesc.length ? index + 1 : 0),
@@ -52,11 +54,14 @@ const Slider = () => {
           {/* {byDateDesc.map((_, radioIdx) => ( */}
           {byDateAsc?.map((event, radioIdx) => (
             <input
-              key={`${event.id}`}
+              // key={`${event.id}`}
+              key={event.title}
               type="radio"
               name="radio-button"
               // checked={idx === radioIdx}
               checked={index === radioIdx}
+              // Pucettes purement indicatives : slider 100% automatique, pas d'interaction manuelle
+              readOnly
             />
           ))}
         </div>
