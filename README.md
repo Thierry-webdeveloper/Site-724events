@@ -1,4 +1,4 @@
-<img src="public/logo-readme.png" width="300" alt="724events — Agence événementielle">
+<img src="public/logo-readme.jpg" width="300" alt="724events — Agence événementielle">
 
 Projet 9 de la formation **Intégrateur Web** (OpenClassrooms).
 
