@@ -30,13 +30,20 @@ export const DataProvider = ({ children }) => {
     if (data) return;
     getData();
   });
-  
+  // Extraction de l'événement le plus récent
+  const last = data?.events?.length
+    ? [...data.events].sort(
+        (evtA, evtB) => new Date(evtB.date) - new Date(evtA.date),
+      )[0]
+    : undefined;
+
   return (
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         data,
         error,
+        last,
       }}
     >
       {children}
@@ -46,7 +53,7 @@ export const DataProvider = ({ children }) => {
 
 DataProvider.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export const useData = () => useContext(DataContext);
 
